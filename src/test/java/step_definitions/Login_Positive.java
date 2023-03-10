@@ -7,7 +7,7 @@ import pages.LoginPage;
 import utilities.BrowserUtilities;
 import utilities.ConfigurationReader;
 
-public class login_positive {
+public class Login_Positive {
     LoginPage loginPage = new LoginPage();
 
     @When("user enters username {string} and password {string}")
