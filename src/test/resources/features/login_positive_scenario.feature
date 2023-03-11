@@ -1,5 +1,5 @@
 
-Feature: US_01 As a user, I should be able to log in.
+Feature: As a user, I should be able to log in.
 
 
   Scenario Outline: Verify login with valid credentials

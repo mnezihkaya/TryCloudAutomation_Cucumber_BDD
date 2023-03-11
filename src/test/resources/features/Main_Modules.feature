@@ -1,5 +1,5 @@
 
-Feature: US_03 As a user, I should be accessing all the main modules of the app.
+Feature: As a user, I should be accessing all the main modules of the app.
 
   Scenario: Verify users accessing all the main modules of the app.
     Given user on the login page
