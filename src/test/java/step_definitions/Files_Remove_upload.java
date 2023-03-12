@@ -23,22 +23,6 @@ public class Files_Remove_upload {
         filePage.addNewFileBtn.click();
     }
 
-    @And("user uploads file with the upload file option")
-    public void userUploadsFileWithTheUploadFileOption() {
-        File file;
-        if (System.getProperty("os.name").contains("windows")) {
-            String path = ".src/test/resources/files/joker.jpg";
-            file = new File(path);
-        } else {
-            String pathOfProject = System.getProperty("user.dir");
-            String pathOfFile = "src/test/resources/files/joker.jpg";
-            String path = pathOfProject + pathOfFile;
-            file = new File(path);
-        }
-        filePage.upload.sendKeys(file.getAbsolutePath());
-        filePage.addNewFileBtn.click();
-
-    }
 
     @Then("Verify the file is displayed on the page")
     public void verifyTheFileIsDisplayedOnThePage() {
