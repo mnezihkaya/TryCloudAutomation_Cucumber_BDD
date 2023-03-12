@@ -14,7 +14,7 @@ import utilities.TryCloudUtilities;
 
 import java.io.File;
 
-public class file_folder_create_and_upload {
+public class File_folder_create_and_upload {
     FilePage filePage=new FilePage();
     UploadsFilesPage uploadsFilesPage=new UploadsFilesPage();
     @And("user click the {string} top-module")

@@ -8,7 +8,7 @@ import pages.FilePage;
 import utilities.BrowserUtilities;
 import utilities.Driver;
 
-public class file_delete_file_folder {
+public class File_delete_file_folder {
     FilePage filePage=new FilePage();
     @Then("Verify the deleted file is displayed on the page")
     public void verifyTheDeletedFileIsDisplayedOnThePage() {
