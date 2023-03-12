@@ -37,35 +37,6 @@ public class Files_Update_Settings {
         beforeStorage = filePage.storageStatus.getText();
     }
 
-    @And("user uploads file with the upload file option")
-    public void userUploadsFileWithTheUploadFileOption() {
-
-        String path;
-        if (System.getProperty("os.name").contains("Windows")) {
-            path = "./src/test/resources/files/testing.png";
-        } else {
-            String pathOfProject = System.getProperty("user.dir");
-            String pathOfFile = "/src/test/resources/files/testing.png";
-            path = pathOfProject + pathOfFile;
-        }
-        File file = new File(path);
-        Assert.assertTrue(">>>>>>> FILE NOT FOUND", file.exists());
-        filePage.upload.sendKeys(file.getAbsolutePath());
-
-        // Check if upload failed due to Not Enough Space and retry
-        try {
-            Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-            Assert.assertTrue(filePage.notEnoughSpaceBtn.isDisplayed());
-            BrowserUtilities.highlight(filePage.notEnoughSpaceBtn);
-            filePage.notEnoughSpaceBtn.click();
-            BrowserUtilities.sleep(1);
-            filePage.upload.sendKeys(file.getAbsolutePath());
-            TryCloudUtilities.waitTillUploadBarDisappears();
-        } catch (Exception e) {
-            Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            TryCloudUtilities.waitTillUploadBarDisappears();
-        }
-    }
 
 
     @Then("the user should be able to see storage usage is increased")

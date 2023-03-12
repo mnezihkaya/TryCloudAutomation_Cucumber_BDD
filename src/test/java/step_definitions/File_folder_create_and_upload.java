@@ -79,18 +79,4 @@ public class File_folder_create_and_upload {
 
     }
 
-    @Then("Verify the file is displayed on the page")
-    public void verifyTheFileIsDisplayedOnThePage() {
-        BrowserUtilities.highlight(uploadsFilesPage.file2Name);
-        Assert.assertTrue(uploadsFilesPage.file2Name.isDisplayed());
-
-        // Remove uploaded file
-        BrowserUtilities.highlight(uploadsFilesPage.file2row);
-        uploadsFilesPage.file2row.click();
-        BrowserUtilities.highlight(filePage.optionDelete);
-        filePage.optionDelete.click();
-        TryCloudUtilities.waitTillUploadBarDisappears();
-
-
-    }
 }
